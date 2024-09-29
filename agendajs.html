@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de controle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function validaInputVazio(input) {
+            if (input.trim() === '') {
+                return false;
+            }
+            return true; 
+        }
+        function exibirMensagem(mensagem) {
+            alert(mensagem);
+        }
+        function validaCampos() {
+            var data = document.querySelector('.input1').value;
+            var anotacao = document.querySelector('.input2').value;
+
+            if (validaInputVazio(data) && validaInputVazio(anotacao)) {
+                console.log('Campos preenchidos!');
+                console.log('Data: ' + data);
+                console.log('Anotação: ' + anotacao);
+                exibirMensagem('Anotação adicionada a agenda!');
+            } else {
+                console.log('Preencha todos os campos!');
+                exibirMensagem('Preencha todos os campos!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="retangulo1">
+        <a href="paginainicialjs.html" style="text-decoration: none; color:white; position: relative; top:10px; left:10px;" class=agenda;> ←  Agenda de controle </a>
+        <div class="retangulo2">
+            <img src="calendario.png" alt="calendario" style="width:250px; height:233px; position: relative; left: 25px; top: 5px;">
+            <div class="retangulorose">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 20px; top: 0px;">Data:</h4>
+                <input type="date" class="input1" style="position: relative; left: 20px; bottom: 20px;">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 20px; bottom: 30px;">Anotação:</h4>
+                <input type="text" class="input2" style="position: relative; left: 20px; bottom: 50px;">
+                <button style="position: relative; left: 80px; bottom: 30px; background-color:rgb(203, 133, 97); color:white; border-color:rgb(52, 72, 96);" onclick="validaCampos()">Adicionar</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .retangulo1 {
+            width: 305px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+        .retangulo2 {
+            width: 305px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 22px;
+            right: 1px;
+        }
+        .retangulorose {
+            width: 250px;
+            height: 180px;
+            background-color: rgb(221, 201, 190);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 40px;
+            left: 25px;
+        }
+    </style>
+</body>

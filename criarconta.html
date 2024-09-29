@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar conta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        // Função para exibir mensagem
+        function exibirMensagem(mensagem) {
+            alert(mensagem);
+        }
+
+        // Função para validar os campos
+        function validaCampos(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            // Obtém os valores dos campos
+            var nome = document.getElementById("nome").value;
+            var cpf = document.getElementById("cpf").value;
+            var cep = document.getElementById("cep").value;
+            var telefone = document.getElementById("telefone").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var csenha = document.getElementById("csenha").value;
+
+            // Verifica se todos os campos estão preenchidos
+            if (nome.trim() === '' || cpf.trim() === '' || cep.trim() === '' || telefone.trim() === '' ||
+                email.trim() === '' || senha.trim() === '' || csenha.trim() === '') {
+                exibirMensagem('Preencha todos os campos!');
+                return;
+            }
+
+            // Verifica se as senhas são iguais
+            if (senha !== csenha) {
+                exibirMensagem('As senhas não são iguais. Repita o cadastro.');
+                return;
+            }
+
+            // Todos os campos foram preenchidos corretamente
+            exibirMensagem('Cadastro completo!');
+            window.location.href = 'paginainicialjs.html'; // Redirecionar para a página inicial
+        }
+    </script>
+</head>
+<body>
+    <div class="retangulo1">
+        <a href="paginaloginjs.html" style="text-decoration: none; color:white; position: relative; top:10px; left:10px;" class="pi"> ← Criar conta </a>
+        <div class="retangulo2">
+            <div class="retangulobranco">
+                <form>
+                    <h5 class="nome" for="nome" style="color:rgb(52, 72, 96); position: relative; left: 40px; top: 0px;">Nome completo:</h5>
+                    <input type="text" class="nome" id="nome" name="nome" style="position: relative; left: 35px; bottom: 20px;">
+                    <h5 for="cpf" class="cpf" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 30px;">CPF:</h5>
+                    <input type="number" class="cpf" id="cpf" name="cpf" style="position: relative; left: 35px; bottom: 50px;">
+                    <h5 for="cep" class="cep" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 55px;">CEP:</h5>
+                    <input type="number" class="cep" id="cep" for="cep" name="cep" style="position: relative; left: 35px; bottom: 75px;">
+                    <h5 for="telefone" class="telefone" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 80px;">Telefone:</h5>
+                    <input type="number" class="telefone" id="telefone" for="telefone" name="telefone" style="position: relative; left: 35px; bottom: 100px;">
+                    <h5 for="email" class="email" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 110px;">E-mail:</h5>
+                    <input type="text" class="email" id="email" for="email" name="email" style="position: relative; left: 35px; bottom: 130px;">
+                    <h5 for="senha" class="senha" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 140px;">Senha:</h5>
+                    <input type="password" class="senha" id="senha" for="senha" name="senha" style="position: relative; left: 35px; bottom: 160px;">
+                    <h5 for="csenha" class="csenha" style="color:rgb(52, 72, 96); position: relative; left: 40px; bottom: 170px;">Confirmar senha:</h5>
+                    <input type="password" class="csenha" id="csenha" for="csenha" name="csenha" style="position: relative; left: 35px; bottom: 190px;">
+                    <button style="position: relative; right: 80px; bottom: 135px; background-color:rgb(203, 133, 97); color:white; border-color:rgb(52, 72, 96);" onclick="validaCampos(event)">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        .retangulo1 {
+            width: 305px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+        }
+        .retangulo2 {
+            width: 305px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 20px;
+            right: 1px;
+        }
+        .retangulobranco {
+            width: 250px;
+            height: 420px;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 20px;
+            left: 25px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+</head>
+<script>
+
+  function validaInputVazio() {
+    texto = document.getElementById("text").value;
+    numero = document.getElementById("number").value;
+    data = document.getElementById("date").value;
+    console.log(texto);
+    console.log(numero);
+    console.log(data);
+        if(texto == "" || numero == "" || data == "") {
+        alert('Preencha todos os dados!');
+    }
+    else {
+        alert('Despesa variável registrada!')
+        window.location.href = 'Despesas Variaveis.html'; 
+    }
+}
+
+
+</script>
+<style>
+
+  #regis {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    position: relative;
+    bottom: 2px;
+    left: 15px;
+}
+
+.box-model{
+    height: 45px;
+    width: 300px;
+    border: 1px solid black;    
+    outline-width: thin;
+    background-color: #a8632f;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.medio { 
+    height: 500px;
+    width: 300px;
+    background-color:#e3dbd0;
+    outline-style: solid;
+    outline-width: thin;
+    position: relative;
+    left: 1px;
+    font-family: 'Nunito', sans-serif;
+
+
+}
+
+.box-model2 {
+    height: 400px;
+    width: 250px;
+    background-color: white;
+    position: relative;
+    top: 30px;
+    left: 25px;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-width: thin;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+#botao {
+    background-color: rgb(203, 133, 97);
+    color:white;
+    font-size: 100%;
+    padding-inline: 15px;
+    border-radius: 10px;
+    outline-style: solid;
+    outline-width: thin;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+h4 {
+    height: 10px;
+    width:10px;
+    font-weight: 300;
+    background-color: white;
+    position: relative;
+    right: 10px;
+    bottom: 15px;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
+input {
+    background-color: #e8c4a7;
+    color: #1f1a39;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+
+}
+</style>
+<body>
+
+  
+<div class="box-model">
+  <a href="Despesas Variaveis.html" style="text-decoration: none; color:white; position: relative; top:15px; left:10px;"> ← Registrar despesas variáveis </a>
+</div>
+<div class="medio">
+  <div class="box-model2">
+    <img src="logo.png" style="position: relative; left:100px; top:10px; width:50px; height:50px;" >
+    <h4 style="left:40px; top:5px; color:rgb(52, 72, 96)" >Valor:</h4>
+    <input type="number"style="position: relative; left: 30px;" id="text"><br>
+    <h4 style="left:40px; top:5px; color:rgb(52, 72, 96)">Descrição:</h4>
+    <input type="text" style="position: relative; left: 30px;" id="number"> <br>
+    <h4 style="left:40px; top:5px; color:rgb(52, 72, 96)">Data:</h4>
+    <input type="date" style="position: relative; left: 50px;" id="date"><br><br><br>
+    
+  
+    <button id="botao" style="position: relative; left: 70px;" onclick="validaInputVazio()">Adicionar</button>
+  </div>
+
+</div>
+    
+</body>
+</html>

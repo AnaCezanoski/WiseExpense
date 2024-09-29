@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function validaInputVazio(input) {
+            if (input.trim() === '') {
+                return false;
+            }
+            return true; 
+        }
+        function validaCampos() {
+            var prazoFinal = document.querySelector('.input1').value;
+            var valorNecessario = document.querySelector('.input2').value;
+            var contribuicaoMensal = document.querySelector('.input3').value;
+            var tempoRestante = document.querySelector('.input4').value;
+            var valorGuardado = document.querySelector('.input5').value;
+            var extras = document.querySelector('.input6').value;
+
+            if (validaInputVazio(prazoFinal) && validaInputVazio(valorNecessario) && validaInputVazio(contribuicaoMensal)&& validaInputVazio(tempoRestante)&& validaInputVazio(valorGuardado)&& validaInputVazio(extras)) {
+                console.log('Campos preenchidos!');
+                console.log('Prazo Final: ' + prazoFinal);
+                console.log('Valor necessário: ' + valorNecessario);
+                console.log('Contribuição mensal: ' + contribuicaoMensal);
+                console.log('Tempo restante: ' + tempoRestante);
+                console.log('Valor guardado: ' + valorGuardado);
+                console.log('Extras: ' + extras)
+                alert('Meta atualizada!')
+                window.location.href = 'metas.html'; 
+            } else {
+                console.log('Preencha todos os campos!');
+                alert('Preencha todos os campos!')
+            }
+        }
+    </script>
+</head>    
+<body>
+    <div class="retangulo1">
+        <a href="metas.html" class="casavoltar"> ←    Casa </a>
+        <div class="retangulo2">
+            <div class="casa">
+                <img src="casametas.png" alt="casa" style="width:80px; height:80px; position: relative; left: 35px; top: 10px;">
+                <div class="table" style="width: 300px; height: 200px; position: relative; right: 71px; top: 30px;">
+                    <table>
+                        <tr>
+                            <td >Prazo final</td>
+                            <td><input type="date" class="input1"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(52, 72, 96);">Valor necessário</td>
+                            <td><input type="number" class="input2"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(52, 72, 96);">Contribuição mensal</td>
+                            <td><input type="number" class="input3"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(52, 72, 96);">Tempo restante</td>
+                            <td><input type="text" class="input4"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(52, 72, 96);">Valor guardado</td>
+                            <td><input type="number" class="input5"></td>
+                        </tr>
+                        <tr>
+                            <td style="color: rgb(52, 72, 96);">Extras</td>
+                            <td><input type="number" class="input6"></td>
+                        </tr>
+                        <tr>
+                            <td><button style="position: relative; left: 100px; background-color:rgb(52, 72, 96); color:white; border-color:white;" onclick="validaCampos()">Confirmar</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .retangulo1 {
+            width: 300px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+        .casavoltar {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+        .retangulo2 {
+            width: 300px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 22px;
+            right: 1px;
+        }
+        .casa {
+            width: 150px;
+            height: 100px;
+            background-color: white;
+            border: 1px solid rgb(52, 72, 96);
+            border-radius: 20px;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 15px;
+            left: 70px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid rgb(227, 219, 208);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(221, 201, 190);
+        }
+
+        th {
+            background-color: rgb(52, 72, 96);
+            color: white;
+        }
+    </style>
+</body>
+</html>

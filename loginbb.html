@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco do Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function validaInputVazio(input) {
+            if (input.trim() === '') {
+                return false;
+            }
+            return true; 
+        }
+        function exibirMensagem(mensagem) {
+            alert(mensagem);
+        }
+        function validaCampos() {
+            var email = document.querySelector('.input1').value;
+            var senha = document.querySelector('.input2').value;
+
+            if (validaInputVazio(email) && validaInputVazio(senha)) {
+                console.log('Campos preenchidos!');
+                window.location.href = 'paginainicialjs.html'; 
+            } else {
+                console.log('Preencha todos os campos!');
+                exibirMensagem('Preencha todos os campos!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="retangulo1">
+        <a href="sincronizarcontas.html" style="text-decoration: none; color:white; position: relative; top:10px; left:10px;" class=conta;> ←  Sincronizar contas </a>
+        <div class="retangulo2">
+            <div class="retangulobranco">
+                <img src="bancodobrasil.png" alt="bancodobrasil" style="width:90px; height:90px; position: relative; left: 80px; top: 30px;">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 40px; top: 20px;">E-mail:</h4>
+                <input type="text" class="input1" style="position: relative; left: 35px;">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 40px; top: 0px;">Senha:</h4>
+                <input type="password" class="input2" style="position: relative; left: 35px; bottom: 20px;">
+                <button style="position: relative; right: 80px; top: 30px; background-color:rgb(203, 133, 97); color:white; border-color:rgb(52, 72, 96);" onclick="validaCampos()">Entrar</button>
+                <img src="logowe.png" alt="logowe" style="width:90px; height:45px; position: relative; left: 150px; top: 140px;">
+            </div>
+        </div>
+    </div>
+    <style>
+        .retangulo1 {
+            width: 305px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+        .retangulo2 {
+            width: 305px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 22px;
+            right: 1px;
+        }
+        .retangulobranco {
+            width: 250px;
+            height: 350px;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 20px;
+            left: 25px;
+        }
+        .logo {
+            position: relative;
+            bottom: 7px;
+            left: 10px;
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</body>

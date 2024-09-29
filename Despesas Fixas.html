@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas Fixas</title>
+</head>
+<style>
+
+    *{
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    .box-1 {
+        height: 45px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: rgb(203, 133, 97);
+    }
+ 
+    #titulo {
+        color: white;
+        position: relative;
+        left: 15px;
+        bottom: 3px;
+    }
+
+    .box-2 {
+        height: 160px;
+        width: 300px;
+        position: relative;
+        left: 1px;
+        background-color:rgb(227, 219, 208);
+        outline-style: solid;
+        outline-width: thin;
+    }
+
+    #Botao {
+        background-color: white;
+        font-size: 120%;
+        padding-inline: 15px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        position: relative;
+        left: 52px;
+        top: 50px;
+    }
+
+    #gastos{
+      position: relative;
+      left: 20px;
+      top: 60px;  
+      font-weight: 500;
+    }
+
+    .box-3 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #344860;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around; 
+    }
+    .flex-items {
+        color: white;
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha1 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #ddc9be;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around; 
+    }
+    .textolinha1{
+        position: relative;
+        bottom: 15px;
+
+    }
+
+    .linha2 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #e3dbd0;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha2{
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha3 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #ddc9be;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha3{
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha4 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #e3dbd0;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha4{
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha5 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #ddc9be;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha5{
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha6 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #e3dbd0;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha6 {
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha7 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #ddc9be;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha7 {
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha8 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #e3dbd0;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha8 {
+        position: relative;
+        bottom: 15px;
+    }
+
+    .linha9 {
+        height: 30px;
+        width: 300px;
+        border: 1px solid black;    
+        outline-width: thin;
+        background-color: #ddc9be;
+        position: relative;
+        right: 1px;
+        top: 40px;
+        display: flex; 
+        justify-content: space-around;
+    }
+    .textolinha9 {
+        position: relative;
+        bottom: 15px;
+    }
+</style>
+<body>
+    <div class="box-1">
+        <a href="ragistrarjs.html" style="text-decoration: none; color:white; position: relative; top:15px; left:10px;"> ← Histótico de despesas fixas </a>
+    </div>
+
+    <div class="box-2">
+        <a href="Regristrar-Despesas Fixas.html"><button id="Botao">Registrar Despesa</button></a><br>
+        <h3 id="gastos">Gastos Registrados</h3><br>
+
+        <div class="box-3">
+            <h5 class="flex-items">Descrição </h5>
+            <h5 class="flex-items">∣</h5>
+            <h5 class="flex-items">Valor </h5>
+            <h5 class="flex-items">∣</h5>
+            <h5 class="flex-items">Data </h5>
+        </div>
+
+        <div class="linha1">
+            <h5 class="textolinha1">Faculdade </h5>
+            <h5 class="textolinha1">R$1800,00 </h5>
+            <h5 class="textolinha1">25/03/23 </h5>           
+        </div>
+
+        <div class="linha2">
+            <h5 class="textolinha2">Luz</h5>
+            <h5 class="textolinha2">R$157,90</h5>
+            <h5 class="textolinha2">20/03/23 </h5>
+        </div>
+
+        <div class="linha3">
+            <h5 class="textolinha3">Água</h5>
+            <h5 class="textolinha3">R$200,00 </h5>
+            <h5 class="textolinha3">17/03/23 </h5>
+        </div>
+
+        <div class="linha4">
+            <h5 class="textolinha4">Academia</h5>
+            <h5 class="textolinha4">R$199,90 </h5>
+            <h5 class="textolinha4">15/03/23 </h5>
+        </div>
+
+        <div class="linha5">
+            <h5 class="textolinha5">Gás</h5>
+            <h5 class="textolinha5">R$129,90 </h5>
+            <h5 class="textolinha5">10/03/23 </h5>
+        </div>
+
+        <div class="linha6">
+            <h5 class="textolinha6">Pilates</h5>
+            <h5 class="textolinha6">R$320,00 </h5>
+            <h5 class="textolinha6">02/03/23 </h5>
+        </div>
+       
+        <div class="linha7">
+            <h5 class="textolinha7">Aluguel</h5>
+            <h5 class="textolinha7">R$2100,00</h5>
+            <h5 class="textolinha7">02/03/23 </h5>
+        </div>
+
+        <div class="linha8">
+            <h5 class="textolinha8">Tim</h5>
+            <h5 class="textolinha8">R$69,90</h5>
+            <h5 class="textolinha8">02/03/23 </h5>
+        </div>
+
+        <div class="linha9">
+            <h5 class="textolinha9">Netflix</h5>
+            <h5 class="textolinha9">R$55,90</h5>
+            <h5 class="textolinha9">28/02/23</h5>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>

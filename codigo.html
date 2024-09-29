@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redefinir senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function validaInputVazio(input) {
+            if (input.trim() === '') {
+                return false;
+            }
+            return true; 
+        }
+        function exibirMensagem(mensagem) {
+            alert(mensagem);
+        }
+        function validaCampos() {
+            var codigo = document.querySelector('.input1').value;
+            var novasenha = document.querySelector('.input2').value;
+
+            if (validaInputVazio(codigo) && validaInputVazio(novasenha)) {
+                console.log('Campos preenchidos!');
+                exibirMensagem('Senha atualizada!')
+                window.location.href = 'paginaloginjs.html'; 
+            } 
+        }
+    </script>
+</head>
+<body>
+    <div class="retangulo1">
+        <a href="esquecisenha.html" style="text-decoration: none; color:white; position: relative; top:10px; left:10px;" class=pi;> ←  Redefinir senha </a>
+        <div class="retangulo2">
+            <div class="retangulobranco">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 40px; top: 20px;">Cógido:</h4>
+                <input type="number" class="input1" style="position: relative; left: 35px;">
+                <h4 style="color:rgb(52, 72, 96); position: relative; left: 40px; top: 0px;">Nova senha:</h4>
+                <input type="text" class="input2" style="position: relative; left: 35px; bottom: 20px;">
+                <button style="position: relative; left: 90px; top: 0px; background-color:rgb(203, 133, 97); color:white; border-color:rgb(52, 72, 96);" onclick="validaCampos()">Redefinir</button>
+                <img src="logowe.png" alt="logowe" style="width:90px; height:45px; position: relative; left: 90px; top: 200px;">
+            </div>
+        </div>
+    </div>
+    <style>
+        .retangulo1 {
+            width: 305px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+        .retangulo2 {
+            width: 305px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 19px;
+            right: 1px;
+        }
+        .retangulobranco {
+            width: 250px;
+            height: 250px;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            font-family: 'Nunito', sans-serif;
+            position: relative;
+            top: 50px;
+            left: 25px;
+        }
+        .logo {
+            position: relative;
+            bottom: 7px;
+            left: 10px;
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</body>

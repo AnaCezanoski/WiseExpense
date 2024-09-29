@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fundo de emergência</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script>
+        function validaInputVazio(input) {
+            if (input.trim() === '') {
+                return false;
+            }
+            return true; 
+        }
+        function validaCampos() {
+            var rendaMensal = document.querySelector('.texto1').value;
+            var despesasEssenciais = document.querySelector('.texto2').value;
+            var total = document.querySelector('.texto3').value;
+            var mes = rendaMensal - despesasEssenciais;
+
+
+            if (validaInputVazio(rendaMensal) && validaInputVazio(despesasEssenciais) && validaInputVazio(total)) {
+                console.log('Campos preenchidos!');
+                console.log('Renda mensal: ' + rendaMensal);
+                console.log('Despesas essenciais: ' + despesasEssenciais)
+                console.log('Fundo do mês: ' + mes)
+                console.log('Total guardado: ' + total)
+                alert('Dados cadastrados! Fundo do mês = ' + mes)
+                window.location.href = 'paginainicialjs.html'; 
+            } else {
+                console.log('Preencha todos os campos!');
+                alert('Preencha todos os campos!');
+            }
+        }
+    </script>
+</head>
+<body> 
+    <div class="retangulo1">
+        <a href="paginainicialjs.html" style="text-decoration: none; color:white; position: relative; top:10px; left:10px;" class=fundo;> ←  Fundo de emergência </a>
+    </div>
+
+    <div class="retangulo2">
+        <div class="retangulo21">
+            <img src="wallet .png" alt="wallet" style="width:90px;height:90px; position: relative; left: 65px; top: 20px;">
+            <h5 style="color: rgb(52, 72, 96);" class="renda">Renda mensal:</h5>
+            <input type="number" class="texto1">
+            <h5 style="color: rgb(52, 72, 96);" class="despesas">Despesas essenciais:</h5>
+            <input type="number" class="texto2">
+            <button style="position: relative; left: 65px; top: 20px; background-color:rgb(203, 133, 97); color:white; border-color:rgb(52, 72, 96);" onclick="validaCampos()">Confirmar</button>
+            <h6 style="color: rgb(52, 72, 96);" class="mes">Fundo de emergência do mês:</h6>
+        </div>
+        <div class="retangulo22">
+            <h5 style="color: rgb(52, 72, 96);" class="total">Fundo de emergência total:</h5>
+            <input type="number" class="texto3">
+        </div>
+    </div>
+        
+    <style>
+        .retangulo1 {
+            width: 300px;
+            height: 45px;
+            background-color: rgb(203, 133, 97);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .fundo {
+            position: relative;
+            bottom: 7px;
+            left: 10px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .retangulo2 {
+            width: 300px;
+            height: 500px;
+            background-color: rgb(227, 219, 208);
+            border: 1px solid #000;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .retangulo21 {
+            width: 220px;
+            height: 350px;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            position: relative;
+            top: 20px;
+            left: 35px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .texto1 {
+            position: relative;
+            top: 0px;
+            left: 20px;
+        }
+
+        .renda {
+            position: relative;
+            top: 10px;
+            left: 30px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .texto2 {
+            position: relative;
+            top: 0px;
+            left: 20px;
+        }
+
+        .despesas {
+            position: relative;
+            top: 10px;
+            left: 30px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .botao {
+            position: relative;
+            top: 10px;
+            left: 65px;
+        }
+
+        .mes {
+            position: relative;
+            top: 10px;
+            left: 20px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .retangulo21 img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 10px;
+            left: 70px;
+        }
+
+        .retangulo22 {
+            width: 220px;
+            height: 80px;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 10px;
+            position: relative;
+            top: 35px;
+            left: 35px;
+        }
+
+        .texto3 {
+            position: relative;
+            bottom: 25px;
+            left: 20px;
+        }
+
+        .total {
+            position: relative;
+            bottom: 10px;
+            left: 25px;
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+
+</body>
+</html>
